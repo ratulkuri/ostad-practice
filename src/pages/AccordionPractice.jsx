@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet"
 import Accordion from "../components/Accordion"
 import faqs from "../data/faqs.js"
 
@@ -6,6 +7,9 @@ const AccordionPractice = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Accordion</title>
+      </Helmet>
       <div className="conainer max-w-7xl mx-auto">
         <div className="pb-1">
           <h2 className="text-2xl font-bold mb-4">Collapsible <span className="text-lg font-medium text-gray-400">( Can open all elements individualy )</span></h2>
