@@ -15,7 +15,7 @@ const Sidebar = ({open}) => {
 
     return (
         <>
-            <div className={`${(!open || !isMobile) ? "invisible" : "visible"} overlay fixed left-0 right-0 top-0 bottom-0 bg-black bg-opacity-50 transition-all`}></div>
+            <div className={`${(!open || !isMobile) ? "invisible" : "visible"} overlay z-40 fixed left-0 right-0 top-0 bottom-0 bg-black bg-opacity-50 transition-all`}></div>
             <aside id="sidebar" className={`${(open && isMobile) ? "open" : ""} fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700`} aria-label="Sidebar">
                 <div className="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
                     <ul className="space-y-2 font-medium">
