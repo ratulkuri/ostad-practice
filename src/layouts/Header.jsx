@@ -34,12 +34,12 @@ const Header = ({toggleSideBar, open = false}) => {
                             </button>
                             <Link href="/" className="flex items-center ml-2 md:mr-24 gap-3">
                                 {/* <FaReact className="h-8 w-8 mr-3 text-blue-400" /> */}
-                                <img className='flex-shrink-0 h-auto' src="https://cdn.ostad.app/public/upload/2022-11-27T06-52-05.802Z-logo%20ostad.png" alt="Ostad Logo" />
+                                {/* <img className='flex-shrink-0 h-auto' src="https://cdn.ostad.app/public/upload/2022-11-27T06-52-05.802Z-logo%20ostad.png" alt="Ostad Logo" /> */}
                                 <span className="self-center text-xl font-bold sm:text-2xl whitespace-nowrap dark:text-white">Practice Projects</span>
                             </Link>
                         </div>
                         <div className="flex items-center">
-                            <div className="flex items-center ml-3 md:mr-10 relative">
+                            <div className="flex items-center ml-3 md:mr-10 relative flex-shrink-0">
                                 <div>
                                     <button ref={avatarBtn} onClick={toggleAccountDropdown} type="button" className="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" aria-expanded="false">
                                         <span className="sr-only">Open user menu</span>
