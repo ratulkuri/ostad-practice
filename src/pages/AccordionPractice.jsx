@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet"
+import { Helmet } from "react-helmet-async"
 import Accordion from "../components/Accordion"
 import faqs from "../data/faqs.js"
 
