@@ -3,53 +3,34 @@
 @tailwind utilities;
 
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
+@layer components {
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
+  /* ********** Sidebar Start ******** */
+  #sidebar:not(.open) {
+    @apply -translate-x-full sm:translate-x-0
+  }
+  /* ********** Sidebar Start ******** */
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
+  /* ********** Menu Start ******** */
+  .menu-item {
+    @apply text-black whitespace-nowrap list-none cursor-pointer py-2 relative px-6 hover:text-blue-400
+  }
+  .menu-item .dropdown {
+    @apply bg-white border mt-3 rounded
+  }
+  .dropdown .menu-item:not(:first-child) {
+    @apply border-t
+  }
+  .menu-item:not(.active) .dropdown {
+    @apply invisible h-0
+  }
+  .menu-item.active {
+    @apply text-blue-400
+  }
+  .menu-item.active .dropdown .dropdown {
+    @apply top-0 -right-2 translate-x-full z-50 mt-0 ml-2
+  }
+  /* ********** Menu End ******** */
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -59,7 +40,5 @@ button:focus-visible {
   a:hover {
     color: #747bff;
   }
-  button {
-    background-color: #f9f9f9;
-  }
+
 }
