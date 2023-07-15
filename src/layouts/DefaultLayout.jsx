@@ -7,7 +7,7 @@ const DefaultLayout = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false)
 
   const toggleSideBar = () => {
-      setSidebarOpen(!sidebarOpen);
+    setSidebarOpen((open) => !open);
   }
 
   return (

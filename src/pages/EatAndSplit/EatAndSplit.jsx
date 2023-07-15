@@ -49,7 +49,7 @@ const EatAndSplit = () => {
 
     const toggleAddFriendForm = (e) => {
         e.preventDefault();
-        setShowAddFriendForm(!showAddFriendForm)
+        setShowAddFriendForm((show) => !show)
     }
 
     return (

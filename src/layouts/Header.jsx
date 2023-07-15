@@ -11,7 +11,7 @@ const Header = ({toggleSideBar, open = false}) => {
     const avatarBtn = useRef(null);
 
     const toggleAccountDropdown = () => {
-        setDropdownOpen(!dropdownOpen)
+        setDropdownOpen((open) => !open)
     }
 
     useClickAwayListener(avatarBtn, () => setDropdownOpen(false));
