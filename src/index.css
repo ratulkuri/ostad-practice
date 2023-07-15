@@ -52,4 +52,30 @@
   }
   /* ********** Accordion End ******** */
 
+  /* ********** Eat & Split Start ******** */
+  .form-control {
+    @apply items-center gap-2 mb-3
+  }
+  .form-control label {
+    @apply font-medium
+  }
+  .form-control input {
+    @apply font-medium rounded outline-none px-2
+  }
+  .form-control input[type=number] {
+    @apply text-center
+  }
+
+  .form-control input[type="number"]::-webkit-inner-spin-button,
+  .form-control input[type="number"]::-webkit-outer-spin-button {
+    @apply no-input-appearance
+  }
+  /* ********** Eat & Split End ******** */
+
+}
+
+@layer utilities {
+  .no-input-appearance {
+    -webkit-appearance: none;
+  }
 }

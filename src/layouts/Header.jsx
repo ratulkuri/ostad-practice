@@ -33,8 +33,6 @@ const Header = ({toggleSideBar, open = false}) => {
                                 }
                             </button>
                             <Link href="/" className="flex items-center ml-2 md:mr-24 gap-3">
-                                {/* <FaReact className="h-8 w-8 mr-3 text-blue-400" /> */}
-                                {/* <img className='flex-shrink-0 h-auto' src="https://cdn.ostad.app/public/upload/2022-11-27T06-52-05.802Z-logo%20ostad.png" alt="Ostad Logo" /> */}
                                 <span className="self-center text-xl font-bold sm:text-2xl whitespace-nowrap dark:text-white">Practice Projects</span>
                             </Link>
                         </div>

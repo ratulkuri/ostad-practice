@@ -1,5 +1,6 @@
 import useIsMobile from "../hooks/useIsMobile"
 import { ImMenu3 } from "react-icons/im"
+import { FaMoneyBillTransfer } from "react-icons/fa6"
 import { NavLink } from "react-router-dom";
 
 const Sidebar = ({open}) => {
@@ -10,7 +11,12 @@ const Sidebar = ({open}) => {
             label: "Accordion",
             icon: <ImMenu3 className="text-2xl" />,
             href: "/",
-        }
+        },
+        {
+            label: "Eat and Split",
+            icon: <FaMoneyBillTransfer className="text-2xl" />,
+            href: "/eat-n-split",
+        },
     ]
 
     return (
