@@ -13,7 +13,7 @@ const SplitForm = ({calculateSplit, selectedFriend, setSelectedFriend}) => {
     const handleBillChange = (e) => {
         let billValue = !!e.target.value ? Number(e.target.value) : 0;
         let yourExpenseValue = !!yourExpense ? Number(yourExpense) : 0;
-        if(billValue >= 0) {
+        if((billValue >= 0) && (billValue >= yourExpenseValue)) {
             setBill(billValue)
         }
         if ((billValue > 0) && (yourExpenseValue > 0) && (billValue >= yourExpenseValue)) {
