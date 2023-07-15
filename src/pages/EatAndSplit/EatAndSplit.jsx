@@ -34,7 +34,7 @@ const EatAndSplit = () => {
         setFriends((oldData) => {
             return oldData.reduce((newData, currentFreind) => {
                 if(selectedFriend.id === currentFreind.id) {
-                    currentFreind.balance = currentFreind.balance + balance
+                    currentFreind.balance = balance
                 }
                 newData.push(currentFreind)
                 return newData;
@@ -75,7 +75,7 @@ const EatAndSplit = () => {
                         </div>
                     </div>
                     {
-                        !!selectedFriend && <SplitForm calculateSplit={calculateSplit} selectedFriend={selectedFriend} />
+                        !!selectedFriend && <SplitForm calculateSplit={calculateSplit} selectedFriend={selectedFriend} setSelectedFriend={setSelectedFriend} />
                     }
                 </div>
             </div>
