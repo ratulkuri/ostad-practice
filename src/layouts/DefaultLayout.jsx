@@ -14,7 +14,7 @@ const DefaultLayout = () => {
     <>
       <div className="app-container">
         <Header toggleSideBar={toggleSideBar} open={sidebarOpen} />
-        <Sidebar open={sidebarOpen} />
+        <Sidebar toggleSideBar={toggleSideBar} open={sidebarOpen} />
         <main className="main p-4 sm:ml-64 mt-14">
           <WebRoutes />
         </main>
