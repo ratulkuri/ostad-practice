@@ -23,11 +23,11 @@ const AddFriendForm = ({handleAddFriend, cancel}) => {
             <div className="w-full rounded-lg bg-gradient-to-r from-cyan-200 to-blue-200 py-4 px-6 mb-4">
                 <form onSubmit={onSubmit}>
                     <div className="mb-10">
-                        <div className="form-control grid grid-cols-3">
+                        <div className="form-control grid grid-cols-1 sm:grid-cols-3">
                             <label className="col-span-1 text-sm">🤡 Friend Name</label>
                             <input className="col-span-2 text-sm text-center py-1" name="name" type="text" onChange={(e) => setName(e.target.value)} value={name} />
                         </div>
-                        <div className="form-control grid grid-cols-3">
+                        <div className="form-control grid grid-cols-1 sm:grid-cols-3">
                             <label className="col-span-1 text-sm">🖼️ Image URL</label>
                             <input className="col-span-2 text-sm text-center py-1" name="image" type="text" onChange={(e) => setImage(e.target.value)} value={image} />
                         </div>

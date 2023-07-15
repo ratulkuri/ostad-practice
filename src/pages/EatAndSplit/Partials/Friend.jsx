@@ -2,7 +2,7 @@ const Friend = ({friend, selectFriend, selected}) => {
 
   return (
     <>
-        <div className="friend flex items-center gap-8 pl-4 pr-4 py-2 bg-slate-100 rounded-lg mb-8">
+        <div className="friend flex items-center gap-4 sm:gap-8 pl-4 pr-4 py-2 bg-slate-100 rounded-lg mb-8">
             <div className="flex items-center gap-x-3">
                 <img src={friend.image} className="w-12 h-12 rounded-full" />
                 <div>
