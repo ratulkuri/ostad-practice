@@ -2,6 +2,7 @@ import useIsMobile from "../hooks/useIsMobile"
 import { ImMenu3 } from "react-icons/im"
 import { FaMoneyBillTransfer } from "react-icons/fa6"
 import { NavLink } from "react-router-dom";
+import { FaMapMarkerAlt } from "react-icons/fa";
 
 const Sidebar = ({open}) => {
     const { isMobile } = useIsMobile();
@@ -16,6 +17,11 @@ const Sidebar = ({open}) => {
             label: "Eat and Split",
             icon: <FaMoneyBillTransfer className="text-2xl" />,
             href: "/eat-n-split",
+        },
+        {
+            label: "GEO Location",
+            icon: <FaMapMarkerAlt className="text-2xl" />,
+            href: "/geo-location",
         },
     ]
 

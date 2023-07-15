@@ -72,10 +72,23 @@
   }
   /* ********** Eat & Split End ******** */
 
+  /* ********** Map Start ******** */
+  .map-wrap {
+    min-height: calc(100vh - 88px);
+  }
+  .leaflet-container {
+    @apply map-conatiner
+  }
+  /* ********** Map End ******** */
+
 }
 
 @layer utilities {
   .no-input-appearance {
     -webkit-appearance: none;
+  }
+
+  .map-container {
+    min-height: calc(100vh - 88px) !important;
   }
 }
