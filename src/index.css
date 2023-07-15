@@ -9,6 +9,16 @@
   #sidebar:not(.open) {
     @apply -translate-x-full sm:translate-x-0
   }
+  .sidebar-menu .nav-link {
+    @apply flex items-center p-2 text-gray-900 rounded-lg dark:text-white dark:hover:bg-gray-700
+  }
+  .sidebar-menu .nav-link:not(.active) {
+    @apply hover:bg-gray-100
+  }
+  .sidebar-menu .nav-link.active {
+    @apply bg-indigo-200
+  }
+
   /* ********** Sidebar Start ******** */
 
   /* ********** Menu Start ******** */
