@@ -31,7 +31,7 @@ const TipCalculator = () => {
             <div className="inner-h-full flex items-center">
                 <div className="w-full max-w-lg mx-auto bg-slate-200 px-8 pb-8 pt-4 rounded-lg">
                     <div className="head text-center mb-3 p-1">
-                        <h1 className="text-lg font-bold uppercase text-gray-500">Trip Calculator</h1>
+                        <h1 className="text-lg font-bold uppercase text-gray-500">Tip Calculator</h1>
                     </div>
                     <ResultDisplay
                         bill={bill}
