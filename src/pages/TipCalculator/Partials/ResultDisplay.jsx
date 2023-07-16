@@ -6,7 +6,7 @@ const ResultDisplay = ({bill, totalBill, totalTip}) => {
             <span className="font-calculator font-medium text-6xl">
                 {bill} {!!totalTip && `+ ${totalTip} TIP`}
             </span>
-            <span className="text-white tracking-[10px] uppercase font-semibold text-xl">
+            <span className="text-white tracking-widest uppercase font-semibold text-xl">
                 {!!totalBill && `You pay $${totalBill}`}
             </span>
         </div>
