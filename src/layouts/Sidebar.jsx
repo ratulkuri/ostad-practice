@@ -4,6 +4,7 @@ import { FaMoneyBillTransfer, FaPersonWalkingLuggage } from "react-icons/fa6"
 import { NavLink } from "react-router-dom";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { GiTakeMyMoney } from "react-icons/gi";
+import { BiExpandAlt } from "react-icons/bi";
 
 const Sidebar = ({open, toggleSideBar}) => {
     const { isMobile } = useIsMobile();
@@ -33,6 +34,11 @@ const Sidebar = ({open, toggleSideBar}) => {
             label: "Tip Calculator",
             icon: <GiTakeMyMoney className="text-2xl" />,
             href: "/tip-calculator",
+        },
+        {
+            label: "Text Expander",
+            icon: <BiExpandAlt className="text-2xl" />,
+            href: "/text-expander",
         },
     ]
 
