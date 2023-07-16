@@ -8,19 +8,12 @@ const ExpandableText = ({
     collapsedButtonText = "Show More",
     expandedButtonColor = "#ef4444",
     collapsedButtonColor = "#4f46e5",
+    textColor = "#000000",
+    hideCollapse = false,
+    className,
 }) => {
     const [content, setContent] = useState(children);
     const [isExpanded, setIsExpanded] = useState(expanded);
-
-    // const handleExpand = () => {
-    //     if(!isExpanded) {
-    //         setContent((prevContent) => prevContent.split(" ").slice(0, minWord).join(" "))
-    //         setIsExpanded(true);
-    //     } else {
-    //         setContent(children);
-    //         setIsExpanded(false);
-    //     }
-    // }
 
     useEffect(() => {
         if(!isExpanded) {
@@ -32,15 +25,20 @@ const ExpandableText = ({
 
     return (
         <>
-            <div className="">
-                {content}
-                <span
-                    className="cursor-pointer ml-2"
-                    onClick={() => setIsExpanded((status) => !status)}
-                    style={{ color: isExpanded ? expandedButtonColor : collapsedButtonColor }}
-                >
-                    {isExpanded ? expandedButtonText : `... ${collapsedButtonText}`}
+            <div className={className}>
+                <span style={{ color: textColor }}>
+                    {content}
                 </span>
+                {
+                    (!isExpanded || !hideCollapse) &&
+                    <button
+                        className="cursor-pointer font-medium ml-2"
+                        onClick={() => setIsExpanded((status) => !status)}
+                        style={{ color: isExpanded ? expandedButtonColor : collapsedButtonColor }}
+                    >
+                        {isExpanded ? expandedButtonText : `... ${collapsedButtonText}`}
+                    </button>
+                }
             </div>
         </>
     )
