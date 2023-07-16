@@ -98,8 +98,8 @@
     -webkit-appearance: none;
   }
 
-  .map-container {
-    min-height: calc(100vh - 88px) !important;
+  .inner-h-full {
+    min-height: calc(100vh - 88px);
   }
 
   .font-mono {
