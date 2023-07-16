@@ -1,6 +1,6 @@
 import useIsMobile from "../hooks/useIsMobile"
 import { ImMenu3 } from "react-icons/im"
-import { FaMoneyBillTransfer } from "react-icons/fa6"
+import { FaMoneyBillTransfer, FaPersonWalkingLuggage } from "react-icons/fa6"
 import { NavLink } from "react-router-dom";
 import { FaMapMarkerAlt } from "react-icons/fa";
 
@@ -22,6 +22,11 @@ const Sidebar = ({open, toggleSideBar}) => {
             label: "GEO Location",
             icon: <FaMapMarkerAlt className="text-2xl" />,
             href: "/geo-location",
+        },
+        {
+            label: "Travel List",
+            icon: <FaPersonWalkingLuggage className="text-2xl" />,
+            href: "/travel-list",
         },
     ]
 
