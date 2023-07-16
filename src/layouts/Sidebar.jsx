@@ -3,6 +3,7 @@ import { ImMenu3 } from "react-icons/im"
 import { FaMoneyBillTransfer, FaPersonWalkingLuggage } from "react-icons/fa6"
 import { NavLink } from "react-router-dom";
 import { FaMapMarkerAlt } from "react-icons/fa";
+import { GiTakeMyMoney } from "react-icons/gi";
 
 const Sidebar = ({open, toggleSideBar}) => {
     const { isMobile } = useIsMobile();
@@ -27,6 +28,11 @@ const Sidebar = ({open, toggleSideBar}) => {
             label: "Travel List",
             icon: <FaPersonWalkingLuggage className="text-2xl" />,
             href: "/travel-list",
+        },
+        {
+            label: "Tip Calculator",
+            icon: <GiTakeMyMoney className="text-2xl" />,
+            href: "/tip-calculator",
         },
     ]
 

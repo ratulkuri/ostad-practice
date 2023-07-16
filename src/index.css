@@ -101,4 +101,11 @@
   .map-container {
     min-height: calc(100vh - 88px) !important;
   }
+
+  .font-mono {
+    font-family: 'VT323', monospace;
+  }
+  .font-calculator {
+    font-family: 'Calculator', sans-serif;
+  }
 }

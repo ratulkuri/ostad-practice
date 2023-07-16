@@ -1,0 +1,9 @@
+/* @import url('https://fonts.cdnfonts.com/css/calculator'); */
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+@font-face {
+    font-family: 'Calculator';
+    src: local('Calculator'), url(./assets/fonts/digital/Digital7-rg1mL.ttf) format('truetype');
+    /* other formats include: 'woff2', 'truetype, 'opentype',
+                              'embedded-opentype', and 'svg' */
+}
