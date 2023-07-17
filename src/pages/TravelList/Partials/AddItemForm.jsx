@@ -42,8 +42,8 @@ const AddItemForm = ({addItem}) => {
             <form onSubmit={handleAddItem}>
                 <div className="flex flex-wrap gap-5 items-center w-full">
 
-                    <span className="flex flex-grow items-center text-gray-500 gap-2">
-                        <label>Item Name :</label>
+                    <span className="flex flex-grow flex-col sm:flex-row sm:items-center text-gray-500 gap-2">
+                        <label className="whitespace-nowrap">Item Name :</label>
                         <div className="inline-flex flex-grow justify-center gap-2 ">
                             <input onChange={handleNameChange} className="bg-white border rounded px-3 py-1 w-full text-enter" type="text" value={name} />
                         </div>
@@ -59,7 +59,7 @@ const AddItemForm = ({addItem}) => {
                         </div>
                     </span>
 
-                    <button className="px-3 py-1.5 text-white bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 rounded-lg">Add Item</button>
+                    <button className="ml-auto sm:ml-0 px-3 py-1.5 text-white bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 rounded-lg">Add Item</button>
 
                 </div>
             </form>

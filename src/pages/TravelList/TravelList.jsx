@@ -63,11 +63,11 @@ const TravelList = () => {
 
             <div className="w-full py-10 text-white bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg">
                 <div className="text-center">
-                    <h1 className="text-3xl font-bold uppercase space-x-2">What do you need for your 😍 trip?</h1>
+                    <h1 className="text-2xl sm:text-3xl font-bold uppercase space-x-2">What do you need for your 😍 trip?</h1>
                 </div>
             </div>
 
-            <div className="w-full max-w-3xl mx-auto bg-slate-50 my-6 p-10 border">
+            <div className="w-full max-w-3xl mx-auto bg-slate-50 my-6 p-4 sm:p-10 border">
                 <AddItemForm addItem={addItem} />
             </div>
 
