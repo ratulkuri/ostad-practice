@@ -3,7 +3,6 @@ import { Helmet } from "react-helmet-async"
 import axios from "axios";
 import moment from "moment";
 import CurrencyInput from "./Partials/CurrencyInput";
-// import dummyRates from "../../data/dummyRate";
 import { getCurrencyInfo } from "../../utils/Helper";
 
 const CurrencyConverter = () => {
@@ -13,21 +12,23 @@ const CurrencyConverter = () => {
   const [currencyTo, setCurrencyTo] = useState("BDT");
   const [currencyList, setCurrencyList] = useState({});
   const [lastUpdatedAt, setRatesDatetime] = useState("");
-  // const [currencyList, setCurrencyList] = useState(dummyRates.conversion_rates);
-  // const [lastUpdatedAt, setLastUpdatedAt] = useState(moment.utc(dummyRates.time_last_update_utc).format("LLL"));
-
   useEffect(() => {
-    // Fetch exchange rates from API
-    axios
-      .get("https://v6.exchangerate-api.com/v6/b3b49b50da71b41d3d330f23/latest/USD")
-      .then((response) => {
-        setCurrencyList(response.data.conversion_rates);
-        setRatesDatetime(moment.utc(response.data.time_last_update_utc).format("LLL"))
-      })
-      .catch((error) => {
-        console.error("Error fetching exchange rates:", error);
-      });
+    try {
+      let exchangeRates = JSON.parse(localStorage.getItem("exchange_rates"))
+
+      // Fetch exchange rates from API or load from cache
+      if(exchangeRates !== null && moment().diff(moment(Date.parse(exchangeRates.time_last_update_utc)), 'days') === 0) {
+        setCurrencyList(exchangeRates.conversion_rates);
+        setRatesDatetime(moment(Date.parse(exchangeRates.time_last_update_utc)).format("LLL"));
+      } else {
+        fetchExchangeRatesApi();
+      }
+    } catch (error) {
+      fetchExchangeRatesApi();
+    }
+
   }, []);
+
 
   useEffect(() => {
     if(Object.keys(currencyList).length > 0) {
@@ -35,6 +36,26 @@ const CurrencyConverter = () => {
       setAmountTo(convertedAmount);
     }
   }, [currencyList])
+
+
+  // Fetch Api
+  const fetchExchangeRatesApi = () => {
+    axios
+      .get("https://v6.exchangerate-api.com/v6/b3b49b50da71b41d3d330f23/latest/USD")
+      .then((response) => {
+        setCurrencyList(response.data.conversion_rates);
+        setRatesDatetime(moment(Date.parse(response.data.time_last_update_utc)).format("LLL"))
+
+        // cache data in localStorage to optimize api request
+        if(window.localStorage) {
+          localStorage.setItem("exchange_rates", JSON.stringify(response.data));
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching exchange rates:", error);
+      });
+  }
+
 
   // Conversion logic
   const convertCurrency = (amount, fromCurrency, toCurrency) => {
@@ -82,8 +103,6 @@ const CurrencyConverter = () => {
     const convertedAmount = convertCurrency(amountTo, selected, convertTo);
     setAmountFrom(convertedAmount);
   };
-
-  console.log(getCurrencyInfo("KAD")?.name ?? "KAD");
 
   return (
     <>
