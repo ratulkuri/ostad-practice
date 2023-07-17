@@ -57,7 +57,7 @@ const GEOLocation = () => {
             <Helmet>
                 <title>GEO Location</title>
             </Helmet>
-            <div className="map-wrap relative w-full bg-slate-200">
+            <div className="map-wrap relative w-full bg-slate-200 z-0">
                 <button onClick={getCurrentLocation} className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-lg inline-flex items-center gap-2 text-xl sm:text-2xl bg-red-500 hover:bg-red-400 active:bg-red-600 transition-all duration-200 text-white py-3 px-4 sm:px-10"><FaMapMarkerAlt />Where am I?</button>
                 {
                     !!longitude && !!latitude &&
