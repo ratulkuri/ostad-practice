@@ -109,7 +109,7 @@ const CurrencyConverter = () => {
       <Helmet>
         <title>Currency Comverter</title>
       </Helmet>
-      <div className=" flex flex-col items-center justify-center gap-8">
+      <div className="mt-10 sm:mt-16 flex flex-col items-center justify-center gap-8">
         <div className="max-w-md mx-auto">
           <h1 className="flex flex-col text-center uppercase">
             <span className="text-xl sm:text-2xl text-gray-400 font-semibold">Google Style</span>
