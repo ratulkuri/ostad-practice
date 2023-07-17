@@ -112,15 +112,15 @@ const CurrencyConverter = () => {
       <div className="inner-h-full flex flex-col items-center justify-center gap-8">
         <div className="max-w-md mx-auto">
           <h1 className="flex flex-col text-center uppercase">
-            <span className="text-2xl text-gray-400 font-semibold">Google Style</span>
-            <span className="text-3xl text-indigo-500 font-bold">Currency Converter</span>
+            <span className="text-xl sm:text-2xl text-gray-400 font-semibold">Google Style</span>
+            <span className="text-2xl sm:text-3xl text-indigo-500 font-bold">Currency Converter</span>
           </h1>
         </div>
-        <div className="shadow-lg max-w-md border rounded-md duration-300 hover:shadow-sm p-10">
+        <div className="shadow-lg max-w-md border rounded-md duration-300 hover:shadow-sm p-6 sm:p-10">
           <div className="display mb-3">
             <h2 className="flex flex-col gap-2 mb-4">
               <span className="font-medium text-gray-400">1 {getCurrencyInfo(currencyFrom)?.name ?? currencyFrom} equals</span>
-              <span className="font-semibold text-3xl line-clamp-1 tracking-tighter">{convertCurrency(1, currencyFrom, currencyTo)} {getCurrencyInfo(currencyTo)?.name ?? currencyTo}</span>
+              <span className="font-semibold text-xl sm:text-3xl line-clamp-1 tracking-tighter">{convertCurrency(1, currencyFrom, currencyTo)} {getCurrencyInfo(currencyTo)?.name ?? currencyTo}</span>
             </h2>
             <span className="datetime inline-block text-xs font-medium">{lastUpdatedAt}</span>
           </div>
