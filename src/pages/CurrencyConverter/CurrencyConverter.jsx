@@ -109,7 +109,7 @@ const CurrencyConverter = () => {
       <Helmet>
         <title>Currency Comverter</title>
       </Helmet>
-      <div className="inner-h-full flex flex-col items-center justify-center gap-8">
+      <div className=" flex flex-col items-center justify-center gap-8">
         <div className="max-w-md mx-auto">
           <h1 className="flex flex-col text-center uppercase">
             <span className="text-xl sm:text-2xl text-gray-400 font-semibold">Google Style</span>
@@ -122,7 +122,7 @@ const CurrencyConverter = () => {
               <span className="font-medium text-gray-400">1 {getCurrencyInfo(currencyFrom)?.name ?? currencyFrom} equals</span>
               <span className="font-semibold text-xl sm:text-3xl line-clamp-1 tracking-tighter">{convertCurrency(1, currencyFrom, currencyTo)} {getCurrencyInfo(currencyTo)?.name ?? currencyTo}</span>
             </h2>
-            <span className="datetime inline-block text-xs font-medium">{lastUpdatedAt}</span>
+            <span className="datetime inline-block text-xs font-medium">{lastUpdatedAt} (last Updated)</span>
           </div>
           <CurrencyInput
             amount={amountFrom}
