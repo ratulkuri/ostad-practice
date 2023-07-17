@@ -6,6 +6,7 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import { GiTakeMyMoney } from "react-icons/gi";
 import { BiExpandAlt } from "react-icons/bi";
 import { MdOutlineCurrencyExchange } from "react-icons/md";
+import { RiBankFill } from "react-icons/ri";
 
 const Sidebar = ({open, toggleSideBar}) => {
     const { isMobile } = useIsMobile();
@@ -46,6 +47,11 @@ const Sidebar = ({open, toggleSideBar}) => {
             icon: <MdOutlineCurrencyExchange className="text-2xl" />,
             href: "/currency-converter",
         },
+        {
+            label: "Bank",
+            icon: <RiBankFill className="text-2xl" />,
+            href: "/bank",
+        },
     ]
 
     return (
@@ -60,7 +66,7 @@ const Sidebar = ({open, toggleSideBar}) => {
                                     <li key={`menu-${index+1}`}>
                                         {
                                             !!link.href ?
-                                            <NavLink to={link?.href} className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
+                                            <NavLink to={link?.href} onClick={toggleSideBar} className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
                                                 {link?.icon}
                                                 <span className="ml-3">{link?.label}</span>
                                             </NavLink>

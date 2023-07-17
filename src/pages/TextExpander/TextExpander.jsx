@@ -9,7 +9,7 @@ const TextExpander = () => {
         </Helmet>
 
         <div className="inner-h-full flex items-center justify-center gap-8">
-            <div className="grid grid-cols-2 gap-5">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
                 <div className="col-span-1 shadow-lg max-w-md border rounded-md duration-300 hover:shadow-sm p-10 mx-auto">
                     <h3 className="text-cyan-600 font-medium mb-3">Text Collapsed to default minimum word (10)</h3>
                     <ExpandableText collapsedButtonColor="rgb(8 145 178)">

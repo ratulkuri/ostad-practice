@@ -58,7 +58,7 @@ const EatAndSplit = () => {
                 <title>Eat and Split</title>
             </Helmet>
             <div className="conainer max-w-7xl mx-auto">
-                <div className="flex gap-10 w-full justify-center">
+                <div className="flex gap-10 w-full justify-center relative">
                     <div className="friend-list-wrap w-full max-w-md">
                         <FriendList friends={friends} selectFriend={setSelectedFriend} selected={selectedFriend} />
                         <div className="add-friend">

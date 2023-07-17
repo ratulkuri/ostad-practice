@@ -58,7 +58,7 @@ const SplitForm = ({calculateSplit, selectedFriend, setSelectedFriend}) => {
 
     return (
         <>
-            <div className="split absolute sm:relative w-[95%] sm:w-full max-w-lg rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 py-4 px-10">
+            <div className="split absolute lg:relative w-full max-w-lg rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 py-8 lg:py-4 px-4 lg:px-10">
                 <h3 className="uppercase text-2xl font-bold mb-8">Split a bill with {selectedFriend.name}</h3>
                 <form className="split-form" onSubmit={handleSubmit}>
                     <div className="mb-10">
@@ -87,10 +87,10 @@ const SplitForm = ({calculateSplit, selectedFriend, setSelectedFriend}) => {
                         </div>
                     </div>
                     <div className="actions flex gap-4 items-center justify-end">
-                        <button onClick={hideSplitForm} className="block sm:hidden w-auto py-2 px-6 sm:px-10 uppercase font-medium text-sm text-center text-white bg-red-600 hover:bg-red-500 active:bg-red-700 ring ring-red-400 active:shadow-none rounded-lg shadow">
+                        <button onClick={hideSplitForm} className="block lg:hidden w-auto py-2 px-6 sm:px-10 uppercase font-medium text-sm text-center text-white bg-red-600 hover:bg-red-500 active:bg-red-700 ring ring-red-400 active:shadow-none rounded-lg shadow">
                             Cancel
                         </button>
-                        <button type="submit" className="block w-auto py-2 px-6 sm:px-10 uppercase font-medium text-sm text-center text-indigo-600 bg-white hover:bg-indigo-50 active:bg-indigo-100 ring ring-indigo-400 active:shadow-none rounded-lg shadow">
+                        <button type="submit" className="block whitespace-nowrap w-auto py-2 px-6 sm:px-10 uppercase font-medium text-sm text-center text-indigo-600 bg-white hover:bg-indigo-50 active:bg-indigo-100 ring ring-indigo-400 active:shadow-none rounded-lg shadow">
                             Split Bill
                         </button>
                     </div>
