@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { GiTakeMyMoney } from "react-icons/gi";
 import { BiExpandAlt } from "react-icons/bi";
+import { MdOutlineCurrencyExchange } from "react-icons/md";
 
 const Sidebar = ({open, toggleSideBar}) => {
     const { isMobile } = useIsMobile();
@@ -39,6 +40,11 @@ const Sidebar = ({open, toggleSideBar}) => {
             label: "Text Expander",
             icon: <BiExpandAlt className="text-2xl" />,
             href: "/text-expander",
+        },
+        {
+            label: "Currency Converter",
+            icon: <MdOutlineCurrencyExchange className="text-2xl" />,
+            href: "/currency-converter",
         },
     ]
 
