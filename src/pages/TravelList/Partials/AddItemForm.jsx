@@ -43,7 +43,7 @@ const AddItemForm = ({addItem}) => {
                 <div className="flex flex-wrap gap-5 items-center w-full">
 
                     <span className="flex flex-grow flex-col sm:flex-row sm:items-center text-gray-500 gap-2">
-                        <label className="whitespace-nowrap">Item Name :</label>
+                        <label className="whitespace-nowrap">Item :</label>
                         <div className="inline-flex flex-grow justify-center gap-2 ">
                             <input onChange={handleNameChange} className="bg-white border rounded px-3 py-1 w-full text-enter" type="text" value={name} />
                         </div>
