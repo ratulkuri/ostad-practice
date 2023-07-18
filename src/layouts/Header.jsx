@@ -1,8 +1,9 @@
-import { TfiClose } from 'react-icons/tfi';
-import AvatarImg from '../assets/avatar.jpg';
 import { useRef } from 'react';
+import AvatarImg from '../assets/avatar.jpg';
 import { Link } from 'react-router-dom';
 import useClickAwayListener from '../hooks/useClickAwayListener';
+import { TfiClose } from 'react-icons/tfi';
+import { ImGithub } from 'react-icons/im';
 import { useState } from 'react';
 
 const Header = ({toggleSideBar, open = false}) => {
@@ -37,6 +38,7 @@ const Header = ({toggleSideBar, open = false}) => {
                             </Link>
                         </div>
                         <div className="flex items-center">
+                            <a href='https://github.com/ratulkuri/ostad-practice' target="_blank" rel='noreferrer' className='flex items-center font-bold border px-4 py-1.5 lg:mr-4 rounded-md'><ImGithub className='text-xl lg:mr-2' /> <span className='hidden lg:inline'>GitHub</span></a>
                             <div className="flex items-center ml-3 md:mr-10 relative flex-shrink-0">
                                 <div>
                                     <button ref={avatarBtn} onClick={toggleAccountDropdown} type="button" className="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" aria-expanded="false">
