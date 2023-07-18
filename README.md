@@ -23,7 +23,7 @@ This project consists of two types of accordion examples. One allows independent
 
 ## Eat and Split
 
-"Eat and Split" is a small app that helps you manage expenses among friends during dining. You can create a list of friends, add their names, profile pictures, and initial balances. When you select a friend, you can enter the total restaurant bill, your individual expenses, and specify who is paying. The app calculates how much each person owes or is owed, and displays the split amount under their name in the friend list.
+"Eat and Split" is a small app that helps you manage expenses among friends during dining. You can create a list of friends, add their names, profile pictures. When you select a friend, you can enter the total restaurant bill, your individual expenses, and specify who is paying. The app calculates how much each person owes or is owed, and displays the split amount under their name in the friend list.
 
 ![Eat and Split](/public/screenshots/eat_n_split.png?raw=true)
 
@@ -47,7 +47,7 @@ This project is a tip calculator that considers your and your friend's ratings f
 
 ## Text Expander
 
-The "Text Expander" component enables you to set various options through props, such as minimum word count, collapse status, one-time expand, collapse and expand button text and color, and title color.
+The "``<ExpandableText />``" component enables you to set various options through props, such as minimum word count, collapse status, one-time expand, change collapse and expand button text and color.
 
 ![Text Expander](/public/screenshots/text_expander.png?raw=true)
 
