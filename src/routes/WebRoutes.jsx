@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import AccordionPractice from '../pages/AccordionPractice';
+import Bank from '../pages/Bank/Bank';
 import CurrencyConverter from '../pages/CurrencyConverter/CurrencyConverter';
 import EatAndSplit from '../pages/EatAndSplit/EatAndSplit';
 import GEOLocation from '../pages/GEOLocation';
@@ -18,6 +19,7 @@ const WebRoutes = () => {
             <Route exact path={'/tip-calculator'} element={<TipCalculator />} />
             <Route exact path={'/text-expander'} element={<TextExpander />} />
             <Route exact path={'/currency-converter'} element={<CurrencyConverter />} />
+            <Route exact path={'/bank'} element={<Bank />} />
         </Routes>
     </>
   )
