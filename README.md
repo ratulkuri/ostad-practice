@@ -2,6 +2,8 @@
 
 This repository contains 8 practice projects. Each project serves as a learning exercise and demonstrates various concepts and functionalities. Below is a brief description of each project:
 
+## <a href="https://ostad-practice.vercel.app" target="_blank" rel="noopener noreferrer">SEE DEMO</a>
+
 ## Table of Contents
 
 1. [Accordion](#accordion)
