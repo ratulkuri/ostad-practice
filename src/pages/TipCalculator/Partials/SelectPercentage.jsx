@@ -1,3 +1,5 @@
+import { toast } from "react-toastify";
+
 const SelectPercentage = ({bill, label, value, onSelect}) => {
 
     const handlePercentageChange = (e) => {
@@ -5,7 +7,7 @@ const SelectPercentage = ({bill, label, value, onSelect}) => {
             const Value = !!e.target.value ? Number(e.target.value) : 0;
             if(value >= 0 && value !== Infinity && Math.abs(value).toString().length <= 14) onSelect(Value)
         } else {
-            alert("Enter a bill first!")
+            toast.error("Enter a bill first!")
         }
     }
 

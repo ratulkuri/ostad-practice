@@ -3,7 +3,7 @@ import AvatarImg from '../assets/avatar.jpg';
 import { Link } from 'react-router-dom';
 import useClickAwayListener from '../hooks/useClickAwayListener';
 import { TfiClose } from 'react-icons/tfi';
-import { ImGithub } from 'react-icons/im';
+// import { ImGithub } from 'react-icons/im';
 import { useState } from 'react';
 
 const Header = ({toggleSideBar, open = false}) => {

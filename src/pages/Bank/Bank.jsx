@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async"
 import AccountActions from "./Partials/AccountActions";
 import AccountOpenCard from "./Partials/AccountOpenCard"
 import StatementTable from "./Partials/StatementTable";
+import { toast } from 'react-toastify';
 import moment from "moment";
 
 const Bank = () => {
@@ -55,14 +56,15 @@ const Bank = () => {
         setLoan(grantedLoanAmount);
         return newBalance;
       });
+      toast.success(`Your Loan hasbeen granted. BDT ${grantedLoanAmount} added to your account!`);
     } else {
-      alert("Pay your previous loan first!")
+      toast.error("Pay your previous loan first!")
     }
   }
 
   const payLoan = () => {
     if (!!loan && balance === 0) {
-      alert("You don't have enough balance to pay loan!")
+      toast.error("You don't have enough balance to pay loan!")
     }
     if(!!loan && !!balance) {
       setBalance((prevBalance) => {
@@ -80,6 +82,11 @@ const Bank = () => {
         }
         setLoan(remainingLoan);
         addRecord(record);
+        if (remainingLoan) {
+          toast.warning(`Your Loan has been paid partialy. BDT ${record.amount} deducted from your account!`, {toastId: "payLoan"});
+        } else {
+          toast.success(`Your Loan has been paid. BDT ${record.amount} deducted from your account!`, {toastId: "payLoan"});
+        }
         return newBalance;
       })
     }
@@ -94,7 +101,7 @@ const Bank = () => {
       addBalance(amount, "opening");
       setHasAccount(true);
     } else {
-      alert(`Write your full name!`)
+      toast.error(`Write your full name!`)
     }
   }
 

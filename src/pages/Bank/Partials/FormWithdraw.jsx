@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 const FormWithdraw = ({className = "", balance = 0,  withdraw, toggleModal}) => {
     const [amount, setAmount] = useState("");
@@ -12,6 +13,7 @@ const FormWithdraw = ({className = "", balance = 0,  withdraw, toggleModal}) => 
         e.preventDefault();
         if(!!amount) {
             withdraw(amount, "withdraw");
+            toast.success(`BDT ${amount} withdrawn from your account!`)
             setAmount("");
             toggleModal();
         }

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import InputAmount from "./InputAmount"
+import { toast } from 'react-toastify';
 
 const AccountOpenCard = ({name = "", setName, openAccount, min = 500}) => {
     const [openingAmmount, setOpeningAmmount] = useState("");
@@ -9,7 +10,7 @@ const AccountOpenCard = ({name = "", setName, openAccount, min = 500}) => {
         if(openingAmmount >= min) {
             openAccount(openingAmmount)
         } else {
-            alert(`Minimum ammount to open account is ${min}`)
+            toast.error(`Minimum ammount to open account is ${min}`)
         }
     }
 

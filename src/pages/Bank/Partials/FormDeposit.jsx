@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 const FormDeposit = ({className = "", addBalance, toggleModal}) => {
     const [amount, setAmount] = useState("");
@@ -12,6 +13,7 @@ const FormDeposit = ({className = "", addBalance, toggleModal}) => {
         e.preventDefault();
         if(!!amount) {
             addBalance(amount, "deposit");
+            toast.success(`BDT ${amount} deposited to your account!`)
             setAmount("");
             toggleModal();
         }
