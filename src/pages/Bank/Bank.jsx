@@ -138,7 +138,7 @@ const Bank = () => {
 
 
             <header className="flex items-center justify-between flex-wrap gap-5 py-4 border-b border-gray-100">
-              <h2 className="text-lg uppercase font-semibold text-gray-800">Bank Satement</h2>
+              <h2 className="text-lg uppercase font-semibold text-gray-800">Bank Statement</h2>
               <AccountActions balance={balance} loan={loan} actions={{ addBalance, removeFromBalance, payLoan, requestLoan, closeAccount }} />
             </header>
             <StatementTable statement={statement} />
